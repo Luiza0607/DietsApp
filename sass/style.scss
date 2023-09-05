@@ -1,0 +1,212 @@
+@use '../sass/colors' as color;
+@use './components' as *;
+@use '../sass/mixins' as *;
+
+//GLOBAL 
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.6rem;
+
+}
+
+//NAVIGATION
+
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 100;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, .5);
+		border-radius: 8px;
+	}
+
+	&:hover {
+
+		.burger-btn__bars::after{
+			width: 100%;
+		}
+		.burger-btn__bars::before {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		@include burgerBtn;
+	}
+
+	&__bars {
+		width: 100%;
+
+		&::after {
+			top: 13px;
+			width: 60%;
+			transition-delay: .1s;
+		}
+
+		&::before {
+			top: 27px;
+			width: 100%;
+		}
+	}
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	transform: translateX(100%);
+	transition: .5s cubic-bezier(0, -0.01, 1, 1);
+	background-color: color.$pastels-yellow;
+	z-index: 99;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		color: color.$strong-pink;
+		text-decoration: none;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			transform: scaleX(0);
+			background-color: color.$strong-pink;
+			transition: transform .5s;
+			content: '';
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+}
+
+//HEADER
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: color.$pure-white;
+	@include heroImages('../image/header.jpg');
+	background-attachment: scroll;
+
+	&__heading {
+		font-family: 'Explora', cursive;
+		font-size: 9.8rem;
+		letter-spacing: 5px;
+		font-weight: 600;
+	}
+
+	&__text {
+		font-size: 2.4rem;
+		font-weight: 300;
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		background: color.$pure-white;
+		border: none;
+		border-radius: 8px;
+		color: color.$strong-pink;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: color.$pastels-yellow;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------MEDIA---------------------//
+
+
+
+@media (max-width: 768px) {
+
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {}

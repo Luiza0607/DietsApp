@@ -1,0 +1,17 @@
+@use '../sass/colors' as color;
+
+@mixin burgerBtn {
+	position: absolute;
+	left: 0;
+	height: 3px;
+	content: '';
+	background-color: #caedff;
+	transition: width .3s;
+}
+
+@mixin heroImages($Img) {
+	background-image: color.$light-pink-gradient, url($Img);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
