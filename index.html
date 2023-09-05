@@ -5,10 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Healthy Diets by Luiza</title>
+	<script src="https://kit.fontawesome.com/27a4d9211e.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Explora&family=Lato:wght@300;400&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="./sass/style.css">
 </head>
 
@@ -20,7 +22,7 @@
 	</button>
 	<nav class="nav">
 		<div class="nav__items">
-			<a href="#directions" class="nav__item">Diets</a>
+			<a href="#diets" class="nav__item">Diets</a>
 			<a href="#offers" class="nav__item">Offers</a>
 			<a href="#opinions" class="nav__item">Opinions</a>
 			<a href="#contact" class="nav__item">Contact</a>
@@ -32,7 +34,239 @@
 		<a href="#offers" class="header__btn btn-special-animation">offers</a>
 		<div class="white-block white-block-left"></div>
 	</header>
+	<main class="main">
+		<section class="diets section-padding section white-section">
+			<div class="wrapper">
+				<h2 class="section-heading">Standard meat diet</h2>
+				<div class="diets__box">
+					<div class="diets__box-img">
+						<img src="./image/standard.jpg" alt="Meat meal" class="diets__img">
+					</div>
+					<div class="diets__box-text">
+						<h3 class="diets__title">3 or 5 meals</h3>
+						<p class="diets__text">It is a diet balanced in terms of macronutrients, containing meat, fish,
+							dairy prfromucts, eggs, vegetables, fruits,
+							carbohydrate prfromucts.</p>
+					</div>
+				</div>
+				<h2 class="section-heading">Vegetarian and vegan diet</h2>
+				<div class="diets__box">
+					<div class="diets__box-img diets__box-img--right">
+						<img src="./image/vegetarian.jpg" alt="Vegetarian meal" class="diets__img">
+					</div>
+					<div class="diets__box-text diets__box-text--right">
+						<h3 class="diets__title">3 or 5 meals</h3>
+						<p class="diets__text">This diet is ideal for people who want to completely eliminate meat and
+							fish from their diet.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="hero-img section">
+			<p class="hero-img__title">Change your diet plan for healthy life !</p>
+			<hr>
+			<p class="hero-img__text">You can do it with my diets.</p>
+			<hr>
+		</section>
 
+		<section class="offers section-padding section white-section" id="offers">
+			<div class="wrapper">
+				<h2 class="section-heading">Offers diets</h2>
+				<div class="offers__cards">
+
+					<div class="offers__card" onclick="void(0)">
+						<div class="offers__card-img offers__card-img--first">
+							<h3 class="offers__card-img-title">Standard</h3>
+							<p class="offers__card-img-info"><i class="fa-solid fa-bowl-food"></i> More
+								information</p>
+						</div>
+						<div class="offers__card-info">
+							<h3 class="offers__card-info-title">Standard</h3>
+							<ul class="offers__card-info-list">
+								<li class="offers__card-info-list-item"><span> 20%</span> protein</li>
+								<li class="offers__card-info-list-item"><span> 45%</span> carbohydrates</li>
+								<li class="offers__card-info-list-item"><span> 35%</span> fats</li>
+								<li class="offers__card-info-list-item"><span>1200 - 2200 kcal</span> </li>
+								<li class="offers__card-info-list-item">from <span>49,90</span> PLN</li>
+							</ul>
+							<button class="offers__card-info-btn btn-special-animation">Order</button>
+						</div>
+					</div>
+					<div class="offers__card" onclick="void(0)">
+						<div class="offers__card-img offers__card-img--second">
+							<h3 class="offers__card-img-title">Ladies vibes</h3>
+							<p class="offers__card-img-info"><i class="fa-solid fa-person-dress"></i> More
+								information</p>
+						</div>
+						<div class="offers__card-info">
+							<h3 class="offers__card-info-title">Ladies vibes</h3>
+							<ul class="offers__card-info-list">
+								<li class="offers__card-info-list-item"><span> 20%</span> protein</li>
+								<li class="offers__card-info-list-item"><span> 45%</span> carbohydrates</li>
+								<li class="offers__card-info-list-item"><span> 35%</span> fats</li>
+								<li class="offers__card-info-list-item"><span>1200 - 2000 kcal</span></li>
+								<li class="offers__card-info-list-item">from <span>69,90</span> PLN</li>
+							</ul>
+							<button class="offers__card-info-btn btn-special-animation">Order</button>
+						</div>
+					</div>
+					<div class="offers__card" onclick="void(0)">
+						<div class="offers__card-img offers__card-img--third">
+							<h3 class="offers__card-img-title">Active</h3>
+							<p class="offers__card-img-info"><i class="fa-solid fa-person-running"></i> More
+								information</p>
+						</div>
+						<div class="offers__card-info">
+							<h3 class="offers__card-info-title">Active</h3>
+							<ul class="offers__card-info-list">
+								<li class="offers__card-info-list-item"><span> 25%</span> protein</li>
+								<li class="offers__card-info-list-item"><span> 40%</span> carbohydrates</li>
+								<li class="offers__card-info-list-item"><span> 35%</span> fats</li>
+								<li class="offers__card-info-list-item"><span>1200 - 3500 kcal</span> </li>
+								<li class="offers__card-info-list-item">from <span>53,90</span> PLN</li>
+							</ul>
+							<button class="offers__card-info-btn btn-special-animation">Order</button>
+						</div>
+					</div>
+					<div class="offers__card" onclick="void(0)">
+						<div class="offers__card-img offers__card-img--fourth">
+							<h3 class="offers__card-img-title">Keto</h3>
+							<p class="offers__card-img-info"><i class="fa-solid fa-bacon"></i> More
+								information</p>
+						</div>
+						<div class="offers__card-info">
+							<h3 class="offers__card-info-title">Keto</h3>
+							<ul class="offers__card-info-list">
+								<li class="offers__card-info-list-item"><span> 20%</span> protein</li>
+								<li class="offers__card-info-list-item"><span> 5%</span> carbohydrates</li>
+								<li class="offers__card-info-list-item"><span> 75%</span> fats</li>
+								<li class="offers__card-info-list-item"><span>1500 - 2500 kcal</span></li>
+								<li class="offers__card-info-list-item">from <span>54,90</span> PLN</li>
+							</ul>
+							<button class="offers__card-info-btn btn-special-animation">Order</button>
+						</div>
+
+					</div>
+					<div class="offers__card" onclick="void(0)">
+						<div class="offers__card-img offers__card-img--fifth">
+							<h3 class="offers__card-img-title">Vegan</h3>
+							<p class="offers__card-img-info"><i class="fa-solid fa-seedling"></i> More
+								information</p>
+						</div>
+						<div class="offers__card-info">
+							<h3 class="offers__card-info-title">Vegan</h3>
+							<ul class="offers__card-info-list">
+								<li class="offers__card-info-list-item"><span> 15%</span> protein</li>
+								<li class="offers__card-info-list-item"><span> 50%</span> carbohydrates</li>
+								<li class="offers__card-info-list-item"><span> 35%</span> fats</li>
+								<li class="offers__card-info-list-item"><span>1200 - 3000 kcal</span></li>
+								<li class="offers__card-info-list-item">from <span>54,90</span> PLN</li>
+							</ul>
+							<button class="offers__card-info-btn btn-special-animation">Order</button>
+						</div>
+					</div>
+					<div class="offers__card" onclick="void(0)">
+						<div class="offers__card-img offers__card-img--sixth">
+							<h3 class="offers__card-img-title">Vege & fish</h3>
+							<p class="offers__card-img-info"><i class="fa-solid fa-fish"></i> More
+								information</p>
+						</div>
+						<div class="offers__card-info">
+							<h3 class="offers__card-info-title">Vege & fish</h3>
+							<ul class="offers__card-info-list">
+								<li class="offers__card-info-list-item"><span> 20%</span> protein</li>
+								<li class="offers__card-info-list-item"><span> 45%</span> carbohydrates</li>
+								<li class="offers__card-info-list-item"><span> 35%</span> fats</li>
+								<li class="offers__card-info-list-item"><span>1200 - 3000 kcal</span></li>
+								<li class="offers__card-info-list-item">from <span>51,90</span> PLN</li>
+							</ul>
+							<button class="offers__card-info-btn btn-special-animation">Order</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="opinions section-padding section white-section" id="opinions">
+			<h2 class="section-heading">Opinions</h2>
+			<div class="wrapper">
+				<div class="opinions__boxes">
+
+					<div class="opinions__box">
+						<div class="opinions__box-img">
+							<img src="./image/opinion1.jpg" alt="Tomasz Nowak">
+						</div>
+						<div class="opinions__box-info">
+							<div class="opinions__box-quote"><i class="fa-regular fa-comment"></i></div>
+							<p class="opinions__box-text">I love my diet because it introduces me to a variety of cuisines I might not have tried otherwise. It's like a culinary
+							adventure at every event.</p>
+							<strong>Tomasz Nowak</strong>
+						</div>
+					</div>
+
+					<div class="opinions__box">
+						<div class="opinions__box-img">
+							<img src="./image/opinion2.jpg" alt="Alicja Kowalczyk">
+						</div>
+						<div class="opinions__box-info">
+							<div class="opinions__box-quote"><i class="fa-solid fa-pen"></i></div>
+							<p class="opinions__box-text">I believe in a balanced diet. Everything in moderation is the key to maintaining a healthy lifestyle.</p>
+							<strong>Alicja Kowalczyk</strong>
+						</div>
+					</div>
+
+					<div class="opinions__box">
+						<div class="opinions__box-img">
+							<img src="./image/opinion3.jpg" alt="Leon Wilk">
+						</div>
+						<div class="opinions__box-info">
+							<div class="opinions__box-quote"><i class="fa-regular fa-heart"></i></div>
+							<p class="opinions__box-text">I prefer plant-based diets because they are better for the environment and can lead to improved health outcomes. I found
+							it here.</p>
+							<strong>Leon Wilk</strong>
+						</div>
+					</div>
+					<div class="opinions__box">
+						<div class="opinions__box-img">
+							<img src="./image/opinion4.jpg" alt="Michał Gaj">
+						</div>
+						<div class="opinions__box-info">
+							<div class="opinions__box-quote"><i class="fa-regular fa-comment"></i></div>
+							<p class="opinions__box-text">A well-balanced diet not only improved my physical health, but also improved mental clarity and overall well-being. It's
+							amazing how food can be medicine.</p>
+							<strong>Michał Gaj</strong>
+						</div>
+					</div>
+					<div class="opinions__box">
+						<div class="opinions__box-img">
+							<img src="./image/opinion5.jpg" alt="Laura Berner">
+						</div>
+						<div class="opinions__box-info">
+							<div class="opinions__box-quote"><i class="fa-solid fa-pen"></i></div>
+							<p class="opinions__box-text">A Keto diet is delicious and satisfying.</p>
+							<strong>Laura Berner</strong>
+						</div>
+					</div>
+					<div class="opinions__box">
+						<div class="opinions__box-img">
+							<img src="./image/opinion6.jpg" alt="Agnieszka Kot">
+						</div>
+						<div class="opinions__box-info">
+							<div class="opinions__box-quote"><i class="fa-regular fa-heart"></i></div>
+							<p class="opinions__box-text">I recommend the Ladies vibes diet as the best gift you can give your body.</p>
+							<strong>Agnieszka Kot</strong>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+	</main>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="./js/slick.js"></script>
 	<script src="./js/script.js"></script>
 </body>
 

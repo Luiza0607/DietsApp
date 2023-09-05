@@ -20,7 +20,6 @@ html {
 body {
 	font-family: 'Lato', sans-serif;
 	font-size: 1.6rem;
-
 }
 
 //NAVIGATION
@@ -43,9 +42,10 @@ body {
 
 	&:hover {
 
-		.burger-btn__bars::after{
+		.burger-btn__bars::after {
 			width: 100%;
 		}
+
 		.burger-btn__bars::before {
 			width: 100%;
 		}
@@ -87,8 +87,8 @@ body {
 	align-items: center;
 	height: 100vh;
 	width: 100%;
-	transform: translateX(100%);
-	transition: .5s cubic-bezier(0, -0.01, 1, 1);
+	transform: translate(-100%);
+	transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
 	background-color: color.$pastels-yellow;
 	z-index: 99;
 
@@ -107,11 +107,11 @@ body {
 
 		&::before {
 			position: absolute;
-			top: 0;
 			left: 0;
+			top: 0;
 			width: 3px;
 			height: 100%;
-			transform: scaleX(0);
+			transform: scale(0);
 			background-color: color.$strong-pink;
 			transition: transform .5s;
 			content: '';
@@ -121,6 +121,20 @@ body {
 			transform: scaleY(1);
 		}
 	}
+}
+
+@keyframes navAnimation {
+	from {
+		transform: translateX(-200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-animation {
+	animation: navAnimation 1s both;
 }
 
 //HEADER
@@ -168,31 +182,284 @@ body {
 	}
 }
 
+//SECTION DIETS
+
+.diets {
+	background-color: color.$yellow;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+	}
+
+	&__img {
+		width: 100%;
+		margin-bottom: 1rem;
+		border-radius: 10px;
+	}
+
+	&__title {
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		color: color.$dark-gray;
+	}
+}
 
 
+//SECTION HERO-IMG
 
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	background-image: color.$light-blue-gradient, url('../image/healthy-food.jpg');
+	text-align: center;
+	color: color.$strong-pink;
+	text-shadow: 1px 1px 2px white;
+	overflow: hidden;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 
+	&__title {
+		font-family: 'Explora', cursive;
+		margin-bottom: 0.5em;
+		font-size: 4.8rem;
+		font-weight: 600;
+		letter-spacing: 2px;
+	}
 
+	&__text {
+		padding: 1em 0;
+	}
+}
 
+//SECTION OFFERS
 
+.offers {
+	background-color: color.$pastels-yellow;
 
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: color.$pure-white;
+		text-align: center;
+		perspective: 1000px;
 
+		&:hover {
+			.offers__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
 
+			.offers__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
 
+		&-img {
+			padding: 2em;
+			height: 100%;
+			border-radius: 8px;
+			background-size: cover;
+			transition: transform 1s, opacity 1s;
 
+			&--first {
+				background-image: color.$gray-gradient, url('../image/var4.jpg');
+			}
 
+			&--second {
+				background-image: color.$gray-gradient, url('../image/var6.jpg');
+			}
 
+			&--third {
+				background-image: color.$gray-gradient, url('../image/var3.jpg');
+			}
 
+			&--fourth {
+				background-image: color.$gray-gradient, url('../image/var1.jpg');
+			}
 
+			&--fifth {
+				background-image: color.$gray-gradient, url('../image/var5.jpg');
+			}
 
+			&--sixth {
+				background-image: color.$gray-gradient, url('../image/var2.jpg');
+			}
 
+			&-title {
+				font-family: 'Explora', cursive;
+				font-size: 4rem;
+				letter-spacing: 3px;
+			}
 
+			&-info {
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+				font-size: 2rem;
+			}
+		}
+
+		&-info {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: color.$blue-color;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border-radius: 8px;
+			opacity: 0;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
+
+			&-title {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 0.8em;
+				font-family: 'Explora', cursive;
+				font-size: 4rem;
+				letter-spacing: 3px;
+			}
+
+			&-list {
+				margin: 0 auto;
+				width: 70%;
+				list-style: none;
+
+				&-item {
+					padding: 1em;
+					font-size: 1.4rem;
+					text-transform: uppercase;
+
+					& span {
+						font-size: 1.8rem;
+						font-weight: 600;
+						color: color.$secondary-color;
+					}
+				}
+			}
+
+			&-btn {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 2em;
+				padding: 1em;
+				border-radius: 8px;
+				width: 40%;
+				border: none;
+				background-color: color.$pure-white;
+				cursor: pointer;
+				color: color.$secondary-color;
+
+				&::before {
+					background-color: color.$pastels-yellow;
+				}
+			}
+		}
+	}
+}
+
+//SECTION OPINIONS
+
+.opinions {
+
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px #2e2e2e2e;
+	}
+
+	&__box-img {
+		position: absolute;
+		top: 10%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+
+	&__box-quote {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		color: color.$secondary-color;
+	}
+
+	&__box-text {
+		margin-bottom: 1em;
+	}
+}
+
+@media(max-width: 767px) {
+	.opinions.section-padding {
+		padding: 6em 0;
+	}
+}
 
 // -------------MEDIA---------------------//
 
+@media(min-width: 576px) {
+	.diets {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
 
+			&-text {
+				width: 55%;
 
-@media (max-width: 768px) {
+				&--right {
+					text-align: right;
+				}
+			}
+
+			&-img {
+				width: 40%;
+
+				&--right {
+					order: 1;
+				}
+			}
+		}
+
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
+
+	.offers {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1rem;
+			width: 45%;
+		}
+	}
+}
+
+@media (min-width: 768px) {
 
 	.header {
 		&__heading {
@@ -207,6 +474,64 @@ body {
 			font-size: 1.6rem;
 		}
 	}
+
+	.nav {
+		&__item {
+			font-size: 4.8rem;
+		}
+	}
+
+	.diets {
+		&__box {
+			margin: 5em 0;
+		}
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			margin-bottom: 2.5rem;
+		}
+
+		&__title {
+			font-size: 3.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+
+	.hero-img {
+		padding: 30rem 2em;
+
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+
+	.offers {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1rem;
+			width: 45%;
+		}
+	}
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+	.hero-img {
+		padding: 40rem 2em;
+	}
+
+	.offers {
+		&__card {
+			width: 30%;
+		}
+	}
+}
