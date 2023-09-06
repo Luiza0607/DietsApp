@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Explora&family=Lato:wght@300;400&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="./sass/style.css">
 </head>
 
@@ -28,14 +29,14 @@
 			<a href="#contact" class="nav__item">Contact</a>
 		</div>
 	</nav>
-	<header class="header section">
-		<h1 class="header__heading">Healthy Diets by Luiza</h1>
+	<header class="header">
+		<h1 class="header__heading" data-aos="flip-down">Healthy Diets by Luiza</h1>
 		<p class="header__text">change your life with me</p>
 		<a href="#offers" class="header__btn btn-special-animation">offers</a>
 		<div class="white-block white-block-left"></div>
 	</header>
 	<main class="main">
-		<section class="diets section-padding section white-section">
+		<section class="diets section-padding white-section" id="diets">
 			<div class="wrapper">
 				<h2 class="section-heading">Standard meat diet</h2>
 				<div class="diets__box">
@@ -43,39 +44,38 @@
 						<img src="./image/standard.jpg" alt="Meat meal" class="diets__img">
 					</div>
 					<div class="diets__box-text">
-						<h3 class="diets__title">3 or 5 meals</h3>
+						<h3 class="diets__title">You can a choice 3 or 5 meals</h3>
 						<p class="diets__text">It is a diet balanced in terms of macronutrients, containing meat, fish,
 							dairy prfromucts, eggs, vegetables, fruits,
 							carbohydrate prfromucts.</p>
 					</div>
 				</div>
+				<hr>
 				<h2 class="section-heading">Vegetarian and vegan diet</h2>
 				<div class="diets__box">
 					<div class="diets__box-img diets__box-img--right">
 						<img src="./image/vegetarian.jpg" alt="Vegetarian meal" class="diets__img">
 					</div>
 					<div class="diets__box-text diets__box-text--right">
-						<h3 class="diets__title">3 or 5 meals</h3>
+						<h3 class="diets__title">You can a choice 3 or 5 meals</h3>
 						<p class="diets__text">This diet is ideal for people who want to completely eliminate meat and
 							fish from their diet.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="hero-img section">
-			<p class="hero-img__title">Change your diet plan for healthy life !</p>
+		<section class="hero-img">
 			<hr>
-			<p class="hero-img__text">You can do it with my diets.</p>
+			<p class="hero-img__title">Change your diet plan for healthy life !</p>
 			<hr>
 		</section>
 
-		<section class="offers section-padding section white-section" id="offers">
+		<section class="offers section-padding white-section" id="offers">
 			<div class="wrapper">
 				<h2 class="section-heading">Offers diets</h2>
 				<div class="offers__cards">
-
 					<div class="offers__card" onclick="void(0)">
-						<div class="offers__card-img offers__card-img--first">
+						<div class="offers__card-img offers__card-img--first" id="standard">
 							<h3 class="offers__card-img-title">Standard</h3>
 							<p class="offers__card-img-info"><i class="fa-solid fa-bowl-food"></i> More
 								information</p>
@@ -93,7 +93,7 @@
 						</div>
 					</div>
 					<div class="offers__card" onclick="void(0)">
-						<div class="offers__card-img offers__card-img--second">
+						<div class="offers__card-img offers__card-img--second" id="ladies">
 							<h3 class="offers__card-img-title">Ladies vibes</h3>
 							<p class="offers__card-img-info"><i class="fa-solid fa-person-dress"></i> More
 								information</p>
@@ -111,7 +111,7 @@
 						</div>
 					</div>
 					<div class="offers__card" onclick="void(0)">
-						<div class="offers__card-img offers__card-img--third">
+						<div class="offers__card-img offers__card-img--third" id="active">
 							<h3 class="offers__card-img-title">Active</h3>
 							<p class="offers__card-img-info"><i class="fa-solid fa-person-running"></i> More
 								information</p>
@@ -129,7 +129,7 @@
 						</div>
 					</div>
 					<div class="offers__card" onclick="void(0)">
-						<div class="offers__card-img offers__card-img--fourth">
+						<div class="offers__card-img offers__card-img--fourth" id="keto">
 							<h3 class="offers__card-img-title">Keto</h3>
 							<p class="offers__card-img-info"><i class="fa-solid fa-bacon"></i> More
 								information</p>
@@ -145,10 +145,9 @@
 							</ul>
 							<button class="offers__card-info-btn btn-special-animation">Order</button>
 						</div>
-
 					</div>
 					<div class="offers__card" onclick="void(0)">
-						<div class="offers__card-img offers__card-img--fifth">
+						<div class="offers__card-img offers__card-img--fifth" id="vegan">
 							<h3 class="offers__card-img-title">Vegan</h3>
 							<p class="offers__card-img-info"><i class="fa-solid fa-seedling"></i> More
 								information</p>
@@ -166,7 +165,7 @@
 						</div>
 					</div>
 					<div class="offers__card" onclick="void(0)">
-						<div class="offers__card-img offers__card-img--sixth">
+						<div class="offers__card-img offers__card-img--sixth" id="vege&fish">
 							<h3 class="offers__card-img-title">Vege & fish</h3>
 							<p class="offers__card-img-info"><i class="fa-solid fa-fish"></i> More
 								information</p>
@@ -187,7 +186,7 @@
 			</div>
 		</section>
 
-		<section class="opinions section-padding section white-section" id="opinions">
+		<section class="opinions section-padding white-section" id="opinions">
 			<h2 class="section-heading">Opinions</h2>
 			<div class="wrapper">
 				<div class="opinions__boxes">
@@ -198,8 +197,9 @@
 						</div>
 						<div class="opinions__box-info">
 							<div class="opinions__box-quote"><i class="fa-regular fa-comment"></i></div>
-							<p class="opinions__box-text">I love my diet because it introduces me to a variety of cuisines I might not have tried otherwise. It's like a culinary
-							adventure at every event.</p>
+							<p class="opinions__box-text">I love my diet because it introduces me to a variety of
+								cuisines I might not have tried otherwise. It's like a culinary
+								adventure at every event.</p>
 							<strong>Tomasz Nowak</strong>
 						</div>
 					</div>
@@ -210,7 +210,8 @@
 						</div>
 						<div class="opinions__box-info">
 							<div class="opinions__box-quote"><i class="fa-solid fa-pen"></i></div>
-							<p class="opinions__box-text">I believe in a balanced diet. Everything in moderation is the key to maintaining a healthy lifestyle.</p>
+							<p class="opinions__box-text">I believe in a balanced diet. Everything in moderation is the
+								key to maintaining a healthy lifestyle.</p>
 							<strong>Alicja Kowalczyk</strong>
 						</div>
 					</div>
@@ -221,8 +222,9 @@
 						</div>
 						<div class="opinions__box-info">
 							<div class="opinions__box-quote"><i class="fa-regular fa-heart"></i></div>
-							<p class="opinions__box-text">I prefer plant-based diets because they are better for the environment and can lead to improved health outcomes. I found
-							it here.</p>
+							<p class="opinions__box-text">I prefer plant-based diets because they are better for the
+								environment and can lead to improved health outcomes. I found
+								it here.</p>
 							<strong>Leon Wilk</strong>
 						</div>
 					</div>
@@ -232,8 +234,9 @@
 						</div>
 						<div class="opinions__box-info">
 							<div class="opinions__box-quote"><i class="fa-regular fa-comment"></i></div>
-							<p class="opinions__box-text">A well-balanced diet not only improved my physical health, but also improved mental clarity and overall well-being. It's
-							amazing how food can be medicine.</p>
+							<p class="opinions__box-text">A well-balanced diet not only improved my physical health, but
+								also improved mental clarity and overall well-being. It's
+								amazing how food can be medicine.</p>
 							<strong>Michał Gaj</strong>
 						</div>
 					</div>
@@ -253,19 +256,86 @@
 						</div>
 						<div class="opinions__box-info">
 							<div class="opinions__box-quote"><i class="fa-regular fa-heart"></i></div>
-							<p class="opinions__box-text">I recommend the Ladies vibes diet as the best gift you can give your body.</p>
+							<p class="opinions__box-text">I recommend the Ladies vibes diet as the best gift you can
+								give your body.</p>
 							<strong>Agnieszka Kot</strong>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</section>
+
+		<section id="contact" class="contact section-padding white-section">
+			<div class="white-block white-block-right"></div>
+			<div class="wrapper">
+				<form class="contact__form">
+					<div class="contact__form-top">
+						<h2 data-aos="fade-down">Have a question for me?</h2>
+						<label for="first and last name" class="contact__form-label">First and last name</label>
+						<input type="text" id="name" class="contact__form-input" required>
+
+						<label for="email" class="contact__form-label">Email</label>
+						<input type="text" id="email" class="contact__form-input" required>
+
+						<label for="message" class="contact__form-label">Type your message here...</label>
+						<textarea id="message" class="contact__form-textarea" required></textarea>
+					</div>
+					<button type="submit" class="contact__form-btn btn-special-animation">Send</button>
+				</form>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer__boxes">
+					<div class="footer__box">
+						<h3 class="footer__box-title"><i class="fa-solid fa-heart" data-aos="zoom-in"></i> LS Company
+						</h3>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, iure!</p>
+						<div class="footer__box-social">
+							<a href="#" class="footer__box-link"><i class="fab fa-instagram"></i></a>
+							<a href="#" class="footer__box-link"><i class="fab fa-facebook"></i></a>
+							<a href="#" class="footer__box-link"><i class="fab fa-twitter"></i></a>
+						</div>
+					</div>
+					<div class="footer__box footer__box-desktop">
+						<h3 class="footer__box-title">Diets</h3>
+						<ul class="footer__box-list">
+							<li class="footer__box-list-item"><a href="#standard">Standard</a></li>
+							<li class="footer__box-list-item"><a href="#ladies">Ladies vibes</a></li>
+							<li class="footer__box-list-item"><a href="#active">Active</a></li>
+							<li class="footer__box-list-item"><a href="#keto">Keto</a></li>
+							<li class="footer__box-list-item"><a href="#vegan">Vegan</a></li>
+							<li class="footer__box-list-item"><a href="#vege&fish">Vege & fish</a></li>
+						</ul>
+					</div>
+					<div class="footer__box footer__box-desktop">
+						<h3 class="footer__box-title">Business</h3>
+						<ul class="footer__box-list">
+							<li class="footer__box-list-item"><a href="#">About me</a></li>
+							<li class="footer__box-list-item"><a href="#">Career</a></li>
+							<li class="footer__box-list-item"><a href="#">Management</a></li>
+							<li class="footer__box-list-item"><a href="#">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<p class="footer__bottom-text"> &copy; <span class="footer_year"></span>Healthy Diets by Luiza</p>
+		</footer>
+
 	</main>
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			startEvent: 'DOMContentLoaded',
+			offset: 100,
+			once: false,
+		});
+	</script>
 	<script src="./js/slick.js"></script>
 	<script src="./js/script.js"></script>
 </body>

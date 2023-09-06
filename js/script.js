@@ -16,7 +16,6 @@ const clickNav = () => {
 
 navBtn.addEventListener('click', clickNav);
 
-
 const navItemAnimation = () => {
 	let delayTime = 0;
 	allNavItems.forEach(item => {
@@ -25,3 +24,4 @@ const navItemAnimation = () => {
 		delayTime++;
 	})
 }
+

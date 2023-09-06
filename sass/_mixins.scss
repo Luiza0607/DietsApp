@@ -15,3 +15,13 @@
 	background-position: center;
 	background-attachment: fixed;
 }
+
+@mixin contact {
+	margin-bottom: 2em;
+	padding: 0.6em 1.2em;
+	border: none;
+	background: none;
+	border-bottom: 2px solid color.$pastels-yellow;
+	border-radius: 8px;
+	font-size: 2rem;
+}

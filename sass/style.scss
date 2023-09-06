@@ -22,6 +22,10 @@ body {
 	font-size: 1.6rem;
 }
 
+.shadow-bg {
+	background-color: rgba(0, 0, 0, .7);
+}
+
 //NAVIGATION
 
 .burger-btn {
@@ -140,13 +144,14 @@ body {
 //HEADER
 
 .header {
+	
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	padding: 2em;
-	height: 75vh;
+	height: 100vh;
 	text-align: center;
 	color: color.$pure-white;
 	@include heroImages('../image/header.jpg');
@@ -154,7 +159,7 @@ body {
 
 	&__heading {
 		font-family: 'Explora', cursive;
-		font-size: 9.8rem;
+		font-size: 10rem;
 		letter-spacing: 5px;
 		font-weight: 600;
 	}
@@ -214,11 +219,9 @@ body {
 
 .hero-img {
 	position: relative;
-	padding: 10em 2em;
 	background-image: color.$light-blue-gradient, url('../image/healthy-food.jpg');
 	text-align: center;
-	color: color.$strong-pink;
-	text-shadow: 1px 1px 2px white;
+	color: color.$pure-white;
 	overflow: hidden;
 	background-attachment: fixed;
 	background-position: center;
@@ -226,21 +229,23 @@ body {
 
 	&__title {
 		font-family: 'Explora', cursive;
-		margin-bottom: 0.5em;
+		margin: 2em;
 		font-size: 4.8rem;
 		font-weight: 600;
 		letter-spacing: 2px;
-	}
-
-	&__text {
-		padding: 1em 0;
 	}
 }
 
 //SECTION OFFERS
 
 .offers {
+
 	background-color: color.$pastels-yellow;
+
+	.section-heading {
+		margin: 1.5em 0 2em;
+		top: -1em;
+	}
 
 	&__card {
 		position: relative;
@@ -328,7 +333,7 @@ body {
 				transform: translateX(-50%);
 				top: 0.8em;
 				font-family: 'Explora', cursive;
-				font-size: 4rem;
+				font-size: 3.5rem;
 				letter-spacing: 3px;
 			}
 
@@ -362,6 +367,7 @@ body {
 				background-color: color.$pure-white;
 				cursor: pointer;
 				color: color.$secondary-color;
+				text-transform: uppercase;
 
 				&::before {
 					background-color: color.$pastels-yellow;
@@ -375,12 +381,19 @@ body {
 
 .opinions {
 
+	background-color: color.$pastels-yellow;
+
+	.section-heading {
+		top: -2em;
+	}
+
 	&__box {
 		position: relative;
 		margin: 2em;
 		padding: 2em;
 		border-radius: 8px;
 		box-shadow: 3px 3px 10px #2e2e2e2e;
+		background-color: color.$pure-white;
 	}
 
 	&__box-img {
@@ -405,6 +418,7 @@ body {
 
 	&__box-text {
 		margin-bottom: 1em;
+		color: color.$dark-gray;
 	}
 }
 
@@ -414,7 +428,158 @@ body {
 	}
 }
 
+//CONTACT
+
+.contact {
+	position: relative;
+	background-image: color.$gray-gradient, url('../image/contact.jpg');
+	overflow: hidden;
+	background-size: cover;
+
+	.wrapper {
+		max-width: 500px;
+	}
+
+	.white-block-right {
+		background-color: color.$pastels-yellow;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		border-radius: 10px;
+		background-color: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(8px);
+	}
+
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+		margin: 2em;
+		color: color.$pastels-yellow;
+		font-size: 2.2rem;
+
+		& h2 {
+			text-align: center;
+			margin: 0.7em;
+			font-family: 'Explora', cursive;
+			font-size: 2em;
+			letter-spacing: 2px;
+		}
+	}
+
+	&__form-input {
+		@include contact;
+	}
+
+	&__form-textarea {
+		@include contact;
+		min-height: 100px;
+	}
+
+	&__form-btn {
+		align-self: center;
+		padding: 1em;
+		margin: 2em;
+		width: 100%;
+		max-width: 200px;
+		color: color.$strong-pink;
+		text-transform: uppercase;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+
+		&::before {
+			background-color: color.$pastels-yellow;
+		}
+	}
+}
+
+//FOOTER
+
+.footer {
+	background-color: color.$dark-gray;
+	color: color.$pastels-yellow;
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	&__box {
+		font-size: 1.4rem;
+	}
+
+	&__box-desktop {
+		display: none;
+	}
+
+	&__box-title {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		text-transform: uppercase;
+
+		& i {
+			color: color.$secondary-color;
+		}
+	}
+
+	&__box-social {
+		margin: 2em 0 1em;
+	}
+
+	&__box-link {
+		padding: 0 .3em;
+		font-size: 3.6rem;
+		text-decoration: none;
+		transition: color .3s;
+		color: color.$pastels-yellow;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:hover {
+			color: color.$secondary-color;
+		}
+	}
+
+	&__bottom-text {
+		padding: 2em;
+		text-align: center;
+		font-size: 1.8rem;
+		font-weight: 600;
+		letter-spacing: 2px;
+		font-family: 'Explora', cursive;
+		color: color.$secondary-color;
+	}
+}
+
+
 // -------------MEDIA---------------------//
+
+
+@media(max-width: 576px) {
+
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+
+	.contact {
+		.wrapper {
+			max-width: 300px;
+		}
+	}
+}
 
 @media(min-width: 576px) {
 	.diets {
@@ -494,7 +659,7 @@ body {
 		}
 
 		&__title {
-			font-size: 3.6rem;
+			font-size: 2.6rem;
 		}
 
 		&__text {
@@ -503,7 +668,6 @@ body {
 	}
 
 	.hero-img {
-		padding: 30rem 2em;
 
 		&__text {
 			font-size: 2.2rem;
@@ -522,11 +686,59 @@ body {
 			width: 45%;
 		}
 	}
+
+	.footer {
+		&__box-desktop {
+			display: block;
+		}
+
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box {
+			margin: 0 2em;
+			width: 25%;
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+
+		&__box-title {
+			font-size: 2.4rem;
+		}
+
+		&__box-list {
+			list-style: none;
+		}
+
+		&__box-list-item {
+			margin-bottom: 1em;
+
+			a {
+				color: color.$pastels-yellow;
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
-	.hero-img {
-		padding: 40rem 2em;
+
+	.header {
+		&__heading {
+			font-size: 10.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
 	}
 
 	.offers {

@@ -13,9 +13,9 @@
 	background-color: color.$yellow;
 
 	&-right {
-		bottom: 0;
+		top: 0;
 		right: -70px;
-		transform: skew(-75deg);
+		transform: skew(75deg);
 	}
 
 	&-left {
@@ -53,8 +53,8 @@
 
 .section-heading {
 	position: relative;
-	margin-bottom: 2em;
-	font-size: 5rem;
+	margin: 1em 0;
+	font-size: 4rem;
 	font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
