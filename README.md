@@ -14,4 +14,4 @@ Project is created with:
 * ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) 
 
 ## 🌐
-*https://randomactivityapp.luiza0607.repl.co
+*https://dietsapp.luiza0607.repl.co
